@@ -485,7 +485,7 @@ EVENTRESULT ppTestAnalysis::RunEvent (){
 	
     Result.push_back ( ResultStruct ( CurrentJet) );
 
-      PseudoJet constituents = sorted_by_pt(jets[pjet].constituents());
+      PseudoJet constituents = sorted_by_pt(CurrentJet.constituents());
       int nparticles = constituents.size();
       if (nparticles == 0) continue;
       float pTlead = constituents[0].perp();
