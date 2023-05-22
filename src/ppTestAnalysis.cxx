@@ -482,8 +482,6 @@ EVENTRESULT ppTestAnalysis::RunEvent (){
     CurrentJet.set_user_info ( userinfo );
 
     if ( pars.MaxJetNEF<1.0 &&  NeutralPart.pt()/CurrentJet.pt() > pars.MaxJetNEF ) continue;
-	
-    Result.push_back ( ResultStruct ( CurrentJet) );
 
       vector<PseudoJet> constituents = sorted_by_pt(CurrentJet.constituents());
       int nparticles = CurrentJet.constituents().size();
@@ -491,17 +489,18 @@ EVENTRESULT ppTestAnalysis::RunEvent (){
       float pTlead = constituents[0].pt();
 
       if(pTlead > 0) {
-          pT_lead0 = CurrentJet.pt();
+          double pT_lead0 = CurrentJet.pt();
       }
       if(pTlead > 3) {
-          pT_lead3 = CurrentJet.pt();
+          double pT_lead3 = CurrentJet.pt();
       }
       if(pTlead > 5) {
-          pT_lead5 = CurrentJet.pt();
+          double pT_lead5 = CurrentJet.pt();
       }
       if(pTlead > 7) {
-          pT_lead7 = CurrentJet.pt();
+          double pT_lead7 = CurrentJet.pt();
       }
+      Result.push_back ( ResultStruct ( CurrentJet, pT_lead0, pT_lead3, pT_lead5, pT_lead7) );
 
   }  
   // By default, sort for original jet pt
