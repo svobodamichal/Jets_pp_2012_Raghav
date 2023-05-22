@@ -487,18 +487,21 @@ EVENTRESULT ppTestAnalysis::RunEvent (){
       int nparticles = CurrentJet.constituents().size();
       if (nparticles == 0) continue;
       float pTlead = constituents[0].pt();
-
+      double pT_lead0;
+      double pT_lead3;
+      double pT_lead5;
+      double pT_lead7;
       if(pTlead > 0) {
-          double pT_lead0 = CurrentJet.pt();
+          pT_lead0 = CurrentJet.pt();
       }
       if(pTlead > 3) {
-          double pT_lead3 = CurrentJet.pt();
+          pT_lead3 = CurrentJet.pt();
       }
       if(pTlead > 5) {
-          double pT_lead5 = CurrentJet.pt();
+          pT_lead5 = CurrentJet.pt();
       }
       if(pTlead > 7) {
-          double pT_lead7 = CurrentJet.pt();
+          pT_lead7 = CurrentJet.pt();
       }
       Result.push_back ( ResultStruct ( CurrentJet, pT_lead0, pT_lead3, pT_lead5, pT_lead7) );
 
