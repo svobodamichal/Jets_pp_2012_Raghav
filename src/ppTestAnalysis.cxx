@@ -488,7 +488,7 @@ EVENTRESULT ppTestAnalysis::RunEvent (){
       PseudoJet constituentos = sorted_by_pt(CurrentJet.constituents());
       int nparticles = CurrentJet.constituents().size();
       if (nparticles == 0) continue;
-      float pTlead = constituentos[0].pt();
+      float pTlead = constituentos[0].perp();
       /*int pTlead_cut[delka] = {0,3,5,7};
       for (int pT_cut = 0; pT_cut < delka; pT_cut++){
       if (pTlead > pTlead_cut[pT_cut]){
