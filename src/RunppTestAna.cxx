@@ -176,10 +176,10 @@ int main( int argc, const char** argv ){
       runid   =-(INT_MAX-1);
       eventid =-(INT_MAX-1);
 
-        pT_lead0.Clear();
-        pT_lead3.Clear();
-        pT_lead5.Clear();
-        pT_lead7.Clear();
+        pT_lead0.clear();
+        pT_lead3.clear();
+        pT_lead5.clear();
+        pT_lead7.clear();
 
       EVENTRESULT ret=ppana->RunEvent();
 
