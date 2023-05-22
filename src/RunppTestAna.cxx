@@ -143,8 +143,17 @@ int main( int argc, const char** argv ){
   ResultTree->Branch("refmult",&refmult, "refmult/d");  
   int njets=0;
   ResultTree->Branch("njets",   &njets, "njets/I" );
+  double pT_lead0;
+  ResultTree->Branch("pT_lead0",&pT_lead0, "pT_lead0/d");
+  double pT_lead3;
+  ResultTree->Branch("pT_lead3",&pT_lead3, "pT_lead3/d");
+  double pT_lead5;
+  ResultTree->Branch("pT_lead5",&pT_lead5, "pT_lead5/d");
+  double pT_lead7;
+  ResultTree->Branch("pT_lead7",&pT_lead7, "pT_lead7/d");
 
-  TClonesArray Jets( "TStarJetVectorJet" );
+
+    TClonesArray Jets( "TStarJetVectorJet" );
   ResultTree->Branch("Jets", &Jets );
   double nef[1000];
   ResultTree->Branch("nef",  nef, "nef[njets]/D" );
