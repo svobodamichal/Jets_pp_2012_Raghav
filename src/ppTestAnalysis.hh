@@ -93,7 +93,12 @@ public:
     double pT_lead5;
     double pT_lead7;
   PseudoJet orig;
-  ResultStruct ( PseudoJet orig) :
+  ResultStruct ( PseudoJet orig, double pT_lead0, double pT_lead3, double pT_lead5, double pT_lead7)  :
+    pT_lead0(pT_lead0),
+    pT_lead3(pT_lead3),
+    pT_lead5(pT_lead5),
+    pT_lead7(pT_lead7),
+
     orig(orig){};
   
   static bool origptgreater( ResultStruct const & a, ResultStruct const & b) { 

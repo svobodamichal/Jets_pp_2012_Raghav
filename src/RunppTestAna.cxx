@@ -143,14 +143,14 @@ int main( int argc, const char** argv ){
   ResultTree->Branch("refmult",&refmult, "refmult/d");  
   int njets=0;
   ResultTree->Branch("njets",   &njets, "njets/I" );
-  double pT_lead0;
-  ResultTree->Branch("pT_lead0",&pT_lead0, "pT_lead0/d");
-  double pT_lead3;
-  ResultTree->Branch("pT_lead3",&pT_lead3, "pT_lead3/d");
-  double pT_lead5;
-  ResultTree->Branch("pT_lead5",&pT_lead5, "pT_lead5/d");
-  double pT_lead7;
-  ResultTree->Branch("pT_lead7",&pT_lead7, "pT_lead7/d");
+  vector<double> pT_lead0;
+  ResultTree->Branch("pT_lead0",&pT_lead0);
+  vector<double> pT_lead3;
+  ResultTree->Branch("pT_lead3",&pT_lead3);
+  vector<double> pT_lead5;
+  ResultTree->Branch("pT_lead5",&pT_lead5);
+  vector<double> pT_lead7;
+  ResultTree->Branch("pT_lead7",&pT_lead7);
 
 
     TClonesArray Jets( "TStarJetVectorJet" );
@@ -175,6 +175,11 @@ int main( int argc, const char** argv ){
       refmult=0;
       runid   =-(INT_MAX-1);
       eventid =-(INT_MAX-1);
+
+        pT_lead0.Clear();
+        pT_lead3.Clear();
+        pT_lead5.Clear();
+        pT_lead7.Clear();
 
       EVENTRESULT ret=ppana->RunEvent();
 
@@ -231,8 +236,13 @@ int main( int argc, const char** argv ){
 	sv.SetCharge( gr.orig.user_info<JetAnalysisUserInfo>().GetQuarkCharge() / 3 );      
 	new ( Jets[ijet] ) TStarJetVectorJet ( sv );
 	nef[ijet] = gr.orig.user_info<JetAnalysisUserInfo>().GetNumber() ;
-	
-	ijet++;
+	pT_lead0.push_back(gr.pT_lead0);
+	pT_lead3.push_back(gr.pT_lead3);
+	pT_lead5.push_back(gr.pT_lead5);
+	pT_lead7.push_back(gr.pT_lead7);
+
+
+          ijet++;
       }
       
       ResultTree->Fill();
