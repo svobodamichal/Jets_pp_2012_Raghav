@@ -485,17 +485,10 @@ EVENTRESULT ppTestAnalysis::RunEvent (){
 	
     Result.push_back ( ResultStruct ( CurrentJet) );
 
-      PseudoJet& constituentos = sorted_by_pt(CurrentJet.constituents());
+      PseudoJet constituentos = sorted_by_pt(CurrentJet.constituents());
       int nparticles = CurrentJet.constituents().size();
       if (nparticles == 0) continue;
       float pTlead = constituentos[0].perp();
-      /*int pTlead_cut[delka] = {0,3,5,7};
-      for (int pT_cut = 0; pT_cut < delka; pT_cut++){
-      if (pTlead > pTlead_cut[pT_cut]){
-          static_cast<TH1D*>(mOutList->FindObject(Form("hpT_raw_R0%.0lf_centbin%i_pT_cut%i",fR[i]*10, centrality)))->Fill(pT_jet);
-      }	 */
-      int pTl[4] ={0,3,5,7};
-
 
       if(pTlead > 0) {
           pT_lead0 = CurrentJet.pt();
