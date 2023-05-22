@@ -88,6 +88,10 @@ struct PseudoJetPtGreater {
  */
 class ResultStruct{
 public:
+    double pT_lead0;
+    double pT_lead3;
+    double pT_lead5;
+    double pT_lead7;
   PseudoJet orig;
   ResultStruct ( PseudoJet orig) :
     orig(orig){};
