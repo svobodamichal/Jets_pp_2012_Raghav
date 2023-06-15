@@ -52,17 +52,17 @@ nhitfrac:   selected track nhit fraction min
       <File>file:./runimage.sh</File>
       <File>file:./star_star.simg</File>
       <File>file:./container.sh</File>
-      <File>file:./setup.sh</File>
-      <File>file:./sum0.root</File>
-      <File>file:./sum1.root</File>
-      <File>file:./sum2.root</File>
-      <File>file:./sum3.root</File>
-      <File>file:./sum4.root</File>
-      <File>file:./sum5.root</File>
-      <File>file:./sum6.root</File>
-      <File>file:./sum7.root</File>
-      <File>file:./sum8.root</File>
-      <File>file:./sum9.root</File>
+      <File>file:./ppRun12Datapicos/ppJP2Run12/setup.sh</File>
+      <File>file:./ppRun12Datapicos/ppJP2Run12/sum0.root</File>
+      <File>file:./ppRun12Datapicos/ppJP2Run12/sum1.root</File>
+      <File>file:./ppRun12Datapicos/ppJP2Run12/sum2.root</File>
+      <File>file:./ppRun12Datapicos/ppJP2Run12/sum3.root</File>
+      <File>file:./ppRun12Datapicos/ppJP2Run12/sum4.root</File>
+      <File>file:./ppRun12Datapicos/ppJP2Run12/sum5.root</File>
+      <File>file:./ppRun12Datapicos/ppJP2Run12/sum6.root</File>
+      <File>file:./ppRun12Datapicos/ppJP2Run12/sum7.root</File>
+      <File>file:./ppRun12Datapicos/ppJP2Run12/sum8.root</File>
+      <File>file:./ppRun12Datapicos/ppJP2Run12/sum9.root</File>
    </Package>
   </SandBox>
 

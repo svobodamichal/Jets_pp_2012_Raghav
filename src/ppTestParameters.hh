@@ -56,15 +56,15 @@ public :
 
   // const double PtJetMin = 20.0;    ///< Min jet pT
   double PtJetMin = 5.0;      ///< Min jet pT
-  double PtJetMax = 1000.0;   ///< Max jet pT
+  double PtJetMax = 200.0;   ///< Max jet pT || was 1000.0
   double LeadPtMin=5.0;                 ///< leading jet minimum p<SUB>T</SUB>
     
   double MaxJetNEF=0.9;       ///< Max neutral energy fraction
 
-  double EtaConsCut = 1.0;    ///< Constituent |&eta;| acceptance
+  double EtaConsCut = 2.5;    ///< Constituent |&eta;| acceptance || was 1.0
   double PtConsMin=0.2;       ///< Constituent pT minimum
   // const double PtConsMin=2.0;       ///< Constituent pT minimum
-  double PtConsMax=30;        ///< Constituent pT maximum
+  double PtConsMax=200;        ///< Constituent pT maximum || was 30
   
   double RefMultCut=0;        ///< Reference multiplicity. Needs to be rethought to accomodate pp and AuAu
   
@@ -73,8 +73,8 @@ public :
   double VzDiffCut=1000;      ///< |Vz(TPC) - Vz(VPD)|
   
   double DcaCut=3.0;          ///< track dca
-  double NMinFit=15;             ///< minimum number of fit points for tracks
-  double FitOverMaxPointsCut=0.52; ///< NFit / NFitPossible
+  double NMinFit=12;             ///< minimum number of fit points for tracks || was 15
+  double FitOverMaxPointsCut=0.51; ///< NFit / NFitPossible || was 0.52
 
   double HadronicCorr = 0.9999; ///< Fraction of hadronic correction
 
