@@ -53,7 +53,7 @@ nhitfrac:   selected track nhit fraction min
       <File>file:./star_star.simg</File>
       <File>file:./container.sh</File>
       <File>file:./setup.sh</File>
-      <File>file:./ppRun12Datapicos/ppJP2Run12/sum0.root</File>
+      <File>file:./sum0.root</File>
 
    </Package>
   </SandBox>
