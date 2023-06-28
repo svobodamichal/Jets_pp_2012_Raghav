@@ -55,15 +55,14 @@ public :
   // const double ghost_area = 0.0005;    ///< ghost area
 
   // const double PtJetMin = 20.0;    ///< Min jet pT
-  double PtJetMin = 5.0;      ///< Min jet pT
+  double PtJetMin = 5.0;      ///< Min jet pT || was 5.0
   double PtJetMax = 200.0;   ///< Max jet pT || was 1000.0
   double LeadPtMin=5.0;                 ///< leading jet minimum p<SUB>T</SUB>
     
   double MaxJetNEF=0.9;       ///< Max neutral energy fraction
 
   double EtaConsCut = 2.5;    ///< Constituent |&eta;| acceptance || was 1.0
-  double PtConsMin=0.2;       ///< Constituent pT minimum
-  // const double PtConsMin=2.0;       ///< Constituent pT minimum
+  double PtConsMin=0.2;       ///< Constituent pT minimum || was 0.2
   double PtConsMax=200;        ///< Constituent pT maximum || was 30
   
   double RefMultCut=0;        ///< Reference multiplicity. Needs to be rethought to accomodate pp and AuAu
@@ -72,7 +71,7 @@ public :
   // const double VzDiffCut=6;         ///< |Vz(TPC) - Vz(VPD)| <-- NOT WORKING in older data (no VPD)
   double VzDiffCut=1000;      ///< |Vz(TPC) - Vz(VPD)|
   
-  double DcaCut=3.0;          ///< track dca
+  double DcaCut=3.0;          ///< track dca || was 3.0
   double NMinFit=12;             ///< minimum number of fit points for tracks || was 15
   double FitOverMaxPointsCut=0.51; ///< NFit / NFitPossible || was 0.52
 
