@@ -62,7 +62,7 @@ def main(args):
 if __name__ == "__main__":
   parser = argparse.ArgumentParser(description='Submit jobs', formatter_class=argparse.ArgumentDefaultsHelpFormatter)
   parser.add_argument('--submitscript', default='submit/submit.xml', help='the xml file for star-submit-template')
-  parser.add_argument('--outputroot', default='/gpfs01/star/pwg/svomich/Jets_pp_2012_Raghav', help='root directory for all output and logs')
+  parser.add_argument('--outputroot', default='/gpfs01/star/pwg/svomich/Jets_pp_2012_Raghav/workDir', help='root directory for all output and logs')
   args = parser.parse_args()
   main( args )
 
